@@ -661,6 +661,7 @@ html{
     width: 100%;
     height: auto;
     max-width: 700px;
+    border-radius: 5px;
   }
   .body-side-box .side-box-segway{
     display: grid;
@@ -701,6 +702,21 @@ html{
     font-weight: 300;
     cursor: default;
   }
+  #notice-notification-tab{
+    position: relative;
+    left: 10px;
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    width: calc(100% - 20px);
+    height: auto;
+    background-color: #505050;
+    color: #fff;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
   .body-side-box .side-box-information div span{
     display: flex;
     width: 100%;
@@ -718,14 +734,21 @@ html{
     padding: 0;
   }
   .body-side-box .side-box-information div div ul{
+    display: grid;
+    grid-template-columns: calc(50% - 10px) calc(50% - 10px);
+    gap: 10px;
     list-style: none;
     padding-left: 5px;
+    padding-right: 5px;
   }
   .body-side-box .side-box-information div div ul li{
     border-left: 3px solid transparent;
     padding-left: 0;
     padding-top: 2px;
     padding-bottom: 2px;
+  }
+  .body-side-box .side-box-information div div ul li:hover, .body-side-box .side-box-information div div ul li:active{
+    scale: 1.025;
   }
   .body-side-box .side-box-information div div ul li::marker{
     color: #1854f1;
@@ -1287,10 +1310,9 @@ html{
       position: relative;
       left: 0;
       height: 100%;
-      transform: translateY(20%);
+      /*transform: translateY(20%);*/
     }
     .body-side-box .side-box-information img{
-      position: relative;
       left: 250px;
     }
     .login-menu{
